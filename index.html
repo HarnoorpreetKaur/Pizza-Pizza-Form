@@ -1,0 +1,115 @@
+<!DOCTYPE html><!--declares the document type-->
+<html lang="en"><!--lang attribute to set english as document language-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza order form</title><!--title of page-->
+    <link rel="stylesheet"type="text/css" href="style.css">
+</head>
+<body><!--body element contain main content-->
+    <header><!--header contain heading-->
+    <h1>Welcome to Pizza Pizza</h1>
+    </header>
+    <main><!--represents main content of body-->
+        <form action="pizza order.php"
+        method="get">
+    <fieldset>
+        <legend>Contact Info</legend>
+        <label for="name">Customer Name:</label>
+        <!--name-->
+        <input type="text" id="name" name="name"required
+        placeholder="Capital Letters">
+        <br><br>
+
+        <label for="Phone No">Phone number</label>
+        <!--phone number-->
+        <input type="tel" id="Phone No" name="Phone No"
+        pattern="[0-9]{12}"
+        placeholder="437-666-9785"required>
+        <br><br>
+        
+        <label for="email">E-MAIL:</label>
+        <!--email-->
+        <input type="email" id="email"
+        name="email"required placeholder="E-mail(example-username@gmail.com)">
+        <br><br>
+    </fieldset>
+
+    <section>
+        <h3> PIZZA TYPE</h3>
+        <fieldset>
+            <legend>Pizza Details</legend>
+            <label for="No of Pizza">Pizza Count</label>
+            <input type="number" id="No of Pizza"
+            name="No of Pizza" min="1"required>
+            <br><br>
+
+            <label for="Pizza size">Shape:</label>
+            <select id="Pizza size" name="Pizza size"required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="Large">Large</option>
+                <option value="X large">X Large</option>
+            </select>
+            <br><br>
+
+            <label for="shape of pizza">Shape:</label>
+            <input type="radio" id="round" name="shape of pizza" value="round" required>
+            <label for="round">Round</label>
+            <input type="radio" id="Square" name="shape of pizza" value="Square" required>
+            <label for="Square">Square</label>
+            <input type="radio" id="Heart" name="shape of pizza" value="Heart" required>
+            <label for="Heart">Heart</label>
+            
+            <!--Image with alt attribute-->
+         
+
+            <label for="toppings">Toppings:</label><br>
+            <input type="checkbox" id="Pepperoni" name="toppings[]" value="Pepperoni">
+            <label for="Mushrooms">Mushrooms</label><br>
+            <input type="checkbox" id="Mushrooms" name="toppings[]" value="Mushrooms">
+            <label for="Mushrooms">Mushrooms</label><br>
+            <input type="checkbox" id="Olives" name="toppings[]" value="Olives">
+            <label for="Olives">Olives</label><br>
+            <input type="checkbox" id="cheese" name="toppings[]" value="cheese">
+            <label for="cheese">cheese</label><br>
+            <input type="checkbox" id="veggie" name="toppings[]" value="veggie">
+            <label for="veggie">veggie</label><br>
+            <input type="checkbox" id="chicken supreme" name="toppings[]" value="chicken supreme">
+            <label for="chicken supreme">chicken supreme</label><br>
+
+            <label for="crust type">Crust type:</label>
+            <select id="crust" name="crust">
+            <option value="thin">THIN CRUST</option>
+            <option value="thick">THICK CRUST</option>
+            </select><br><br>
+
+            <label>DELIVERY OPTIONS:</label><br>
+            <input type="radio" id="pickup" name="delivery"
+            value="pickup">
+            <label for="pickup">PICKUP</label>
+            <input type="radio" id="delivery" name="delivery"
+            value="delivery">
+            <label for="delivery">Delivery</label>
+
+            <p>
+                Enjoy your Fav.Pizza
+                <img src="Pizza.jpeg" alt="Yummy"/>
+             </p>
+
+            <label for="comments">Additional comments:</label><br>
+            <textarea id="comments" name="comments"
+            rows="2"cols=20></textarea><br><br>
+            <input type="submit" value="Place order">
+            <input type="reset" value="Reset">
+         </fieldset>
+         
+    </section>
+    </main>
+
+    <footer><!--represents footer section of page-->
+        <p> Thank you for ordering from Pizza Pizza !</p>
+    </footer>
+    
+</body>
+</html>
